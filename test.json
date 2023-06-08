@@ -1,98 +1,72 @@
 [
     {
-        "image": "https://images.unsplash.com/photo-1608094542863-bca6ff40072c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJvY2tzdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-        "name": "John Smith",
-        "email": "john@example.com",
-        "numClassesTaken": 10,
-        "classesTaken": [
-            "Piano",
-            "Guitar",
-            "Music Theory"
-        ]
+        "image": "https://img.freepik.com/free-photo/kids-being-part-sunday-school_23-2149582893.jpg?size=626&ext=jpg&ga=GA1.2.1983216414.1680192950&semt=ais",
+        "name": "Piano Basics",
+        "instructor": "John Smith",
+        "availableSeats": 10,
+        "price": 150
     },
     {
-        "image": "https://images.unsplash.com/photo-1584208124835-8a3d74ae211c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fHBpYW5vfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-        "name": "Jane Doe",
-        "email": "jane@example.com",
-        "numClassesTaken": 5,
-        "classesTaken": [
-            "Violin",
-            "Cello"
-        ]
+        "image": "https://img.freepik.com/free-photo/friends-with-guitar-party_23-2148115746.jpg?size=626&ext=jpg&ga=GA1.2.1983216414.1681902950&semt=ais",
+        "name": "Guitar Fundamentals",
+        "instructor": "Emily Davis",
+        "availableSeats": 8,
+        "price": 120
     },
     {
-        "image": "https://plus.unsplash.com/premium_photo-1681503973682-29cec46571b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZHJ1bXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-        "name": "Mike Johnson",
-        "email": "mike@example.com",
-        "numClassesTaken": 8,
-        "classesTaken": [
-            "Drums",
-            "Percussion"
-        ]
+        "image": "https://img.freepik.com/free-photo/friends-singing-karaoke-party_23-2148115676.jpg?size=626&ext=jpg&ga=GA1.1.1983216414.1680192950&semt=ais",
+        "name": "Vocal Training",
+        "instructor": "Sarah Johnson",
+        "availableSeats": 12,
+        "price": 180
     },
     {
-        "image": "https://plus.unsplash.com/premium_photo-1681307743395-bf4548dcd9d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2luZ2VyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-        "name": "Sarah Wilson",
-        "email": "sarah@example.com",
-        "numClassesTaken": 3,
-        "classesTaken": [
-            "Choir"
-        ]
+        "image": "https://img.freepik.com/free-photo/man-recording-music-drum-set-studio_1150-14709.jpg?size=626&ext=jpg&ga=GA1.1.1983216414.1680192950&semt=ais",
+        "name": "Drumming 101",
+        "instructor": "Michael Thompson",
+        "availableSeats": 6,
+        "price": 200
     },
     {
-        "image": "https://images.unsplash.com/photo-1566913485242-694e995731b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dmlvbGlufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-        "name": "David Lee",
-        "email": "david@example.com",
-        "numClassesTaken": 12,
-        "classesTaken": [
-            "Saxophone",
-            "Clarinet"
-        ]
+        "image": "https://img.freepik.com/free-photo/portrait-cute-latin-girl-learning-how-play-violin-having-fun-preschool_662251-2637.jpg?size=626&ext=jpg&ga=GA1.1.1983216414.1680192950&semt=ais",
+        "name": "Violin Masterclass",
+        "instructor": "Olivia Lee",
+        "availableSeats": 4,
+        "price": 250
     },
     {
-        "image": "https://images.unsplash.com/photo-1590532472229-4d8fca1a6ef1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZsdXRlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-        "name": "Emily Brown",
-        "email": "emily@example.com",
-        "numClassesTaken": 6,
-        "classesTaken": [
-            "Vocal",
-            "Choir"
-        ]
+        "image": "https://img.freepik.com/free-photo/closeup-casual-man-composing-music_53876-24792.jpg?size=626&ext=jpg&ga=GA1.2.1983216414.1680192950&semt=ais",
+        "name": "Music Theory Workshop",
+        "instructor": "David Rodriguez",
+        "availableSeats": 15,
+        "price": 100
     },
     {
-        "image": "https://images.unsplash.com/photo-1570797803365-c6eb43b1f040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8UGVyY3Vzc2lvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        "name": "Alex Turner",
-        "email": "alex@example.com",
-        "numClassesTaken": 1,
-        "classesTaken": [
-            "Percussion"
-        ]
+        "image": "https://img.freepik.com/free-photo/musicians-stage-during-concert_1321-453.jpg?size=626&ext=jpg&ga=GA1.2.1983216414.1680192950&semt=sph",
+        "name": "Bass Guitar Techniques",
+        "instructor": "Daniel Wilson",
+        "availableSeats": 10,
+        "price": 140
     },
     {
-        "image": "https://images.unsplash.com/photo-1556298183-a7ba6248bc58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8VHJ1bXBldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        "name": "Laura Martinez",
-        "email": "laura@example.com",
-        "numClassesTaken": 3,
-        "classesTaken": [
-            "Trumpet"
-        ]
+        "image": "https://img.freepik.com/free-photo/man-works-with-sound-laptop-early-morning_169016-26471.jpg?size=626&ext=jpg&ga=GA1.1.1983216414.1680192950&semt=sph",
+        "name": "Songwriting Essentials",
+        "instructor": "Amanda Reed",
+        "availableSeats": 8,
+        "price": 160
     },
     {
-        "image": "https://images.unsplash.com/photo-1465661910194-fd1393a57d24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFzcyUyMGd1aXRlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        "name": "Ryan Thompson",
-        "email": "ryan@example.com",
-        "numClassesTaken": 7,
-        "classesTaken": [
-            "Bass Guitar"
-        ]
+        "image": "https://img.freepik.com/free-photo/young-woman-looking-paint-brushes-gray_114579-39985.jpg?size=626&ext=jpg&ga=GA1.2.1983216414.1680192950&semt=ais",
+        "name": "Flute Mastery",
+        "instructor": "Sophia Nguyen",
+        "availableSeats": 5,
+        "price": 220
     },
     {
-        "image": "https://images.unsplash.com/photo-1601794391361-714374e6b618?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Zmx1dGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-        "name": "Sophie Wilson",
-        "email": "sophie@example.com",
-        "numClassesTaken": 9,
-        "classesTaken": [
-            "Flute"
-        ]
+        "image": "https://img.freepik.com/free-photo/midi-keyboard-headphones-laptop-with-program-creating-music_169016-26455.jpg?size=626&ext=jpg&ga=GA1.1.1983216414.1680192950&semt=sph",
+        "name": "Music Production Workshop",
+        "instructor": "Alex Parker",
+        "availableSeats": 12,
+        "price": 180
     }
 ]

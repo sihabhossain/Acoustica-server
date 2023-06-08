@@ -31,14 +31,21 @@ const client = new MongoClient(uri, {
 async function run() {
     try {
         // Connect the client to the server	(optional starting in v4.7)
-        await client.connect();
+        // await client.connect();
 
         const instructorsCollection = client.db('Acoustica').collection('instructors');
+        const classesCollection = client.db('Acoustica').collection('classes');
 
 
         // get all instructors 
         app.get('/instructors', async (req, res) => {
             const result = await instructorsCollection.find().toArray()
+            res.send(result);
+        })
+
+        // get all classes
+        app.get('/classes', async (req, res) => {
+            const result = await classesCollection.find().toArray()
             res.send(result);
         })
 
