@@ -35,18 +35,24 @@ async function run() {
 
         const instructorsCollection = client.db('Acoustica').collection('instructors');
         const classesCollection = client.db('Acoustica').collection('classes');
-        const userCollection = client.db('Acoustica').collection('users');
+        const usersCollection = client.db('Acoustica').collection('users');
 
 
         // user related apis
-        app.put('/users', async (req, res) => {
+        app.post('/users', async (req, res) => {
             const user = req.body;
             const query = { email: user.email }
-            const existingUser = await userCollection.findOne(query)
+            const existingUser = await usersCollection.findOne(query)
             if (existingUser) {
                 return res.send({ message: 'user already exists' })
             }
-            const result = await userCollection.insertOne(user);
+            const result = await usersCollection.insertOne(user);
+            res.send(result)
+        })
+
+        // get all users
+        app.get('/users', async (req, res) => {
+            const result = await usersCollection.find().toArray()
             res.send(result)
         })
 
