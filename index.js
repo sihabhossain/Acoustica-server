@@ -71,6 +71,8 @@ async function run() {
 
 
 
+
+
         // get all instructors 
         app.get('/instructors', async (req, res) => {
             const result = await instructorsCollection.find().toArray()
