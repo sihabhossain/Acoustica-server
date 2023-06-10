@@ -55,6 +55,7 @@ async function run() {
         const instructorsCollection = client.db('Acoustica').collection('instructors');
         const classesCollection = client.db('Acoustica').collection('classes');
         const usersCollection = client.db('Acoustica').collection('users');
+        const selectedCollection = client.db('Acoustica').collection('selected');
 
         // JWT implementation
         app.post('/jwt', (req, res) => {
@@ -140,6 +141,17 @@ async function run() {
         // get all classes
         app.get('/classes', async (req, res) => {
             const result = await classesCollection.find().toArray()
+            res.send(result);
+        })
+
+
+        // CLAASS RELATED APIS
+
+
+        // add my-selected to database
+        app.post('/my-selected', async (req, res) => {
+            const selected = req.body;
+            const result = await selectedCollection.insertOne(selected)
             res.send(result);
         })
 
