@@ -155,6 +155,12 @@ async function run() {
             res.send(result);
         })
 
+        // get my selected classes
+        app.get('/my-selected', async (req, res) => {
+            const result = await selectedCollection.find().toArray()
+            res.send(result)
+        })
+
 
 
 
