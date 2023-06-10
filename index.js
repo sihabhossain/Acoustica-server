@@ -171,6 +171,12 @@ async function run() {
             res.send(result)
         })
 
+        // get added classes
+        app.get('/add-class', async (req, res) => {
+            const result = await addClassCollection.find().toArray()
+            res.send(result)
+        })
+
 
 
         // Send a ping to confirm a successful connection
