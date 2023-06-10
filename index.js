@@ -56,6 +56,7 @@ async function run() {
         const classesCollection = client.db('Acoustica').collection('classes');
         const usersCollection = client.db('Acoustica').collection('users');
         const selectedCollection = client.db('Acoustica').collection('selected');
+        const addClassCollection = client.db('Acoustica').collection('add-class');
 
         // JWT implementation
         app.post('/jwt', (req, res) => {
@@ -162,6 +163,13 @@ async function run() {
         })
 
 
+
+        // INSTRUCTOR RELATED APIS
+        app.post('/add-class', async (req, res) => {
+            const newClass = req.body;
+            const result = await addClassCollection.insertOne(newClass)
+            res.send(result)
+        })
 
 
 
