@@ -1,6 +1,7 @@
 const express = require('express');
 require('dotenv').config()
 const cors = require('cors')
+const jwt = require('jsonwebtoken');
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -13,7 +14,7 @@ const corsOptions = {
 app.use(cors(corsOptions))
 app.use(express.json())
 
-
+// verify JWT
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.jaehzkc.mongodb.net/?retryWrites=true&w=majority`;
@@ -36,6 +37,15 @@ async function run() {
         const instructorsCollection = client.db('Acoustica').collection('instructors');
         const classesCollection = client.db('Acoustica').collection('classes');
         const usersCollection = client.db('Acoustica').collection('users');
+
+        // JWT implementation
+        app.post('/jwt', (req, res) => {
+            const user = req.body;
+            const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
+                expiresIn: '7d'
+            })
+            res.send({ token })
+        })
 
 
         // user related apis
@@ -68,8 +78,6 @@ async function run() {
             const result = await usersCollection.updateOne(filter, updateDoc)
             res.send(result)
         })
-
-
 
 
 
