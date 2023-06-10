@@ -66,6 +66,25 @@ async function run() {
         })
 
 
+        // if user is admin
+        app.get('/users/admin/:email', async (req, res) => {
+            const email = req.params.email;
+            const query = { email: email };
+            const user = await usersCollection.findOne(query);
+            const result = { admin: user?.role === 'admin' };
+            res.send(result)
+        })
+
+        // if user is instrcutor
+        app.get('/users/instructor/:email', async (req, res) => {
+            const email = req.params.email;
+            const query = { email: email };
+            const user = await usersCollection.findOne(query);
+            const result = { instructor: user?.role === 'instructor' };
+            res.send(result)
+        })
+
+
         // user related apis
         app.post('/users', async (req, res) => {
             const user = req.body;
@@ -91,6 +110,19 @@ async function run() {
             const updateDoc = {
                 $set: {
                     role: 'admin'
+                }
+            }
+            const result = await usersCollection.updateOne(filter, updateDoc)
+            res.send(result)
+        })
+
+        // update user to instructor
+        app.patch('/users/instructor/:id', async (req, res) => {
+            const id = req.params.id;
+            const filter = { _id: new ObjectId(id) }
+            const updateDoc = {
+                $set: {
+                    role: 'instructor'
                 }
             }
             const result = await usersCollection.updateOne(filter, updateDoc)
