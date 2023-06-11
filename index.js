@@ -216,6 +216,22 @@ async function run() {
 
 
 
+        // send feedback to instructor
+        app.patch('/feedback/:id', async (req, res) => {
+            const id = req.params.id;
+            const feedBack = req.body;
+            const filter = { _id: new ObjectId(id) }
+            const options = { upsert: true };
+            const updateDoc = {
+                $set: {
+                    feedback: feedBack.data,
+                }
+            }
+            const result = await addClassCollection.updateOne(filter, updateDoc, options)
+            res.send(result)
+        })
+
+
 
         // Send a ping to confirm a successful connection
         await client.db("admin").command({ ping: 1 });
