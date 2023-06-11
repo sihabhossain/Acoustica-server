@@ -178,6 +178,44 @@ async function run() {
         })
 
 
+        // get manage classes
+        app.get('/manage-classes', async (req, res) => {
+            const result = await addClassCollection.find().toArray()
+            res.send(result)
+        })
+
+
+        // approve action
+        app.patch('/approved-classes/:id', async (req, res) => {
+            const id = req.params.id;
+            const filter = { _id: new ObjectId(id) }
+            const options = { upsert: true };
+            const updateDoc = {
+                $set: {
+                    status: 'approved'
+                }
+            }
+            const result = await addClassCollection.updateOne(filter, updateDoc, options)
+            res.send(result)
+        })
+
+
+        // Deny action
+        app.patch('/denied-classes/:id', async (req, res) => {
+            const id = req.params.id;
+            const filter = { _id: new ObjectId(id) }
+            const options = { upsert: true };
+            const updateDoc = {
+                $set: {
+                    status: 'denied'
+                }
+            }
+            const result = await addClassCollection.updateOne(filter, updateDoc, options)
+            res.send(result)
+        })
+
+
+
 
         // Send a ping to confirm a successful connection
         await client.db("admin").command({ ping: 1 });
