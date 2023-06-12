@@ -225,7 +225,7 @@ async function run() {
             const updateDoc = {
                 $set: {
                     feedback: feedBack.data,
-                }
+                },
             }
             const result = await addClassCollection.updateOne(filter, updateDoc, options)
             res.send(result)
